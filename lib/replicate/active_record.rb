@@ -268,7 +268,7 @@ module Replicate
         replicate_natural_key.each do |attribute_name|
           conditions[attribute_name] = attributes[attribute_name.to_s]
         end
-        find(:first, :conditions => conditions)
+        find_by(conditions)
       end
 
       # Update an AR object's attributes and persist to the database without
